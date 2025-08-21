@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Shield, Car, Wrench, ArrowRight, CheckCircle, Play } from 'lucide-react';
+import { Shield, Car, Wrench, ArrowRight, CheckCircle } from 'lucide-react';
 
 const AnimatedText = ({ text }: { text: string }) => {
   const words = text.split(" ");
@@ -58,7 +58,7 @@ const AnimatedText = ({ text }: { text: string }) => {
 const Home: React.FC = () => {
   return (
     <div className="bg-brand-dark text-brand-light">
-      {/* Hero Section with Video Background - FINAL FIX */}
+      {/* Hero Section with Video Background */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full z-0">
           <video
@@ -76,22 +76,13 @@ const Home: React.FC = () => {
         <div className="absolute top-0 left-0 w-full h-full bg-black/90 z-10"></div>
         
         <div className="relative z-20 text-center max-w-4xl mx-auto px-4">
-          <motion.div
-            className="inline-block p-3 bg-brand-dark/20 backdrop-blur-sm border border-brand-gold/30 rounded-full mb-6"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-          >
-            <Play className="w-8 h-8 text-brand-gold" />
-          </motion.div>
-
           <AnimatedText text="Inovação em Proteção Veicular" />
           
           <motion.p 
             className="mt-6 text-lg md:text-xl text-brand-light/90 max-w-2xl mx-auto font-medium"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.5 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
           >
             Combinamos tecnologia de ponta e design para criar a experiência de segurança definitiva.
           </motion.p>
@@ -100,7 +91,7 @@ const Home: React.FC = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center mt-10"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.8 }}
+            transition={{ duration: 0.8, delay: 1.0 }}
           >
             <Link 
               to="/servicos"
@@ -123,7 +114,7 @@ const Home: React.FC = () => {
             className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 pt-8 border-t border-brand-light/10"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 2.2 }}
+            transition={{ duration: 0.8, delay: 1.2 }}
           >
             <div className="text-center">
               <p className="text-3xl md:text-4xl font-bold text-brand-gold">15+</p>
@@ -144,7 +135,7 @@ const Home: React.FC = () => {
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 2.5 }}
+          transition={{ duration: 1, delay: 1.4 }}
         >
           <div className="w-6 h-10 border-2 border-brand-light/30 rounded-full flex justify-center">
             <div className="w-1 h-3 bg-brand-gold rounded-full mt-2 animate-bounce"></div>
